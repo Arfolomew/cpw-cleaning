@@ -1,3 +1,5 @@
+export const dynamic = "force-static";
+
 import { Resend } from "resend";
 import { NextRequest, NextResponse } from "next/server";
 
