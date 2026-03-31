@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clear Point Window Cleaning | Pinellas &amp; Pasco County Florida</title>
+  <meta name="description" content="Pinellas &amp; Pasco County's 5-star rated Window Cleaners. (980) 435-3637. Window &amp; Gutter Cleaning, Paver Sealing &amp; Pressure Washing." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            teal: '#1FC6C7',
+            navy: '#1A1E32',
+            orange: '#FF662A',
+          },
+          fontFamily: {
+            poppins: ['Poppins', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="font-poppins bg-white text-navy">
+
+  <!-- ============================================
+       TOP BAR
+       ============================================ -->
+  <div class="bg-[#1FC6C7] text-[#1A1E32] text-xs font-semibold">
+    <div class="max-w-7xl mx-auto px-4 py-2 flex flex-col sm:flex-row items-center justify-between gap-1">
+      <span>Hours: Mon–Fri 8am–7pm &nbsp;|&nbsp; Sat 9am–6pm &nbsp;|&nbsp; Sun Closed</span>
+      <a href="tel:9804353637" class="flex items-center gap-1.5 hover:underline font-bold">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+        </svg>
+        (980) 435-3637
+      </a>
+    </div>
+  </div>
+
+  <!-- ============================================
+       STICKY HEADER / NAV
+       ============================================ -->
+  <header id="navbar" class="bg-[#1A1E32]">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+
+      <!-- Logo -->
+      <a href="index.html">
+        <img src="assets/logo-white.png" alt="Clear Point Window Cleaning" class="h-12 lg:h-16 w-auto" />
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold text-white">
+        <a href="#" class="hover:text-[#1FC6C7] transition-colors duration-150">Home</a>
+        <a href="#services" class="hover:text-[#1FC6C7] transition-colors duration-150">Services</a>
+        <a href="#about" class="hover:text-[#1FC6C7] transition-colors duration-150">About</a>
+        <a href="our-work.html" class="hover:text-[#1FC6C7] transition-colors duration-150">Our Work</a>
+        <a href="#contact" class="hover:text-[#1FC6C7] transition-colors duration-150">Contact</a>
+      </nav>
+
+      <!-- Desktop CTA Buttons -->
+      <div class="hidden lg:flex items-center gap-3">
+        <a href="#contact" class="bg-[#1FC6C7] text-[#1A1E32] font-bold px-5 py-2.5 rounded-lg text-sm hover:bg-[#17b0b1] transition-colors duration-150">Free Estimate</a>
+        <a href="tel:9804353637" class="bg-[#FF662A] text-white font-bold px-5 py-2.5 rounded-lg text-sm hover:bg-[#e5551f] transition-colors duration-150">Call Now</a>
+      </div>
+
+      <!-- Hamburger (mobile) -->
+      <button id="hamburger" class="lg:hidden text-white p-2 rounded-md hover:bg-white/10 transition" aria-label="Open menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu">
+    <!-- Close button -->
+    <button id="menu-close" class="absolute top-5 right-5 text-white p-2 hover:text-[#1FC6C7] transition" aria-label="Close menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+    <a href="#">Home</a>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="our-work.html">Our Work</a>
+    <a href="#contact">Contact</a>
+    <div class="flex flex-col gap-3 w-full px-10 mt-2">
+      <a href="#contact" class="bg-[#1FC6C7] text-[#1A1E32] font-bold px-5 py-3 rounded-lg text-center text-base hover:bg-[#17b0b1] transition">Free Estimate</a>
+      <a href="tel:9804353637" class="bg-[#FF662A] text-white font-bold px-5 py-3 rounded-lg text-center text-base hover:bg-[#e5551f] transition">Call (980) 435-3637</a>
+    </div>
+  </div>
+
+  <!-- ============================================
+       HERO
+       ============================================ -->
+  <section class="hero-video-wrapper">
+    <video autoplay muted loop playsinline>
+      <source src="assets/videos/IMG_0055.mp4" type="video/mp4" />
+    </video>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <!-- Eyebrow -->
+      <p class="eyebrow text-white mb-4">
+        <span class="eyebrow-line"></span>
+        PINELLAS &amp; PASCO COUNTY, FLORIDA
+        <span class="eyebrow-line"></span>
+      </p>
+
+      <!-- Headline -->
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-5 max-w-3xl">
+        See What You've<br/>
+        <span class="text-[#1FC6C7]">Been Missing.</span>
+      </h1>
+
+      <!-- Subheadline -->
+      <p class="text-white/85 text-base sm:text-lg max-w-xl mb-8 font-medium">
+        Serving Pinellas &amp; Pasco County — 5-star rated, locally owned, and ready to make your property shine.
+      </p>
+
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4 mb-10">
+        <a href="#contact" class="bg-[#1FC6C7] text-[#1A1E32] font-bold px-8 py-4 rounded-lg text-base hover:bg-[#17b0b1] transition-colors duration-150 shadow-lg">Get a Free Estimate</a>
+        <a href="tel:9804353637" class="border-2 border-[#FF662A] text-white font-bold px-8 py-4 rounded-lg text-base hover:bg-[#FF662A] transition-colors duration-150">Call (980) 435-3637</a>
+      </div>
+
+      <!-- Trust Badges -->
+      <div class="flex flex-wrap items-center justify-center gap-4 text-white/90 text-sm font-semibold">
+        <span class="flex items-center gap-1.5">
+          <span class="text-yellow-400">★★★★★</span> 5-Star Rated
+        </span>
+        <span class="w-px h-5 bg-white/30 hidden sm:block"></span>
+        <span class="flex items-center gap-1.5">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-[#1FC6C7]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+          </svg>
+          Licensed &amp; Insured
+        </span>
+        <span class="w-px h-5 bg-white/30 hidden sm:block"></span>
+        <span class="flex items-center gap-1.5">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-[#FF662A]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+          </svg>
+          Same-Day Quotes
+        </span>
+      </div>
+    </div>
+
+    <!-- Bounce arrow -->
+    <a href="#stats" class="hero-arrow" aria-label="Scroll down">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+      </svg>
+    </a>
+  </section>
+
+  <!-- ============================================
+       STATS BAR
+       ============================================ -->
+  <section id="stats" class="bg-[#1A1E32] py-10">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-0 divide-x divide-white/15">
+
+        <div class="flex flex-col items-center py-4 px-6 text-center">
+          <span class="text-4xl font-extrabold text-[#1FC6C7]">
+            <span class="stats-counter" data-target="100">0</span>+
+          </span>
+          <span class="text-white/75 text-sm font-medium mt-1">Happy Clients</span>
+        </div>
+
+        <div class="flex flex-col items-center py-4 px-6 text-center">
+          <span class="text-4xl font-extrabold text-[#1FC6C7]">
+            <span class="stats-counter" data-target="5">0</span>
+          </span>
+          <span class="text-white/75 text-sm font-medium mt-1">Services Offered</span>
+        </div>
+
+        <div class="flex flex-col items-center py-4 px-6 text-center">
+          <span class="text-4xl font-extrabold text-[#1FC6C7]">
+            <span class="stats-counter" data-target="5">0</span>&#9733;
+          </span>
+          <span class="text-white/75 text-sm font-medium mt-1">Star Rated</span>
+        </div>
+
+        <div class="flex flex-col items-center py-4 px-6 text-center">
+          <span class="text-4xl font-extrabold text-[#FF662A]">&#9889;</span>
+          <span class="text-white/75 text-sm font-medium mt-1">Same-Day Quotes</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       SERVICES
+       ============================================ -->
+  <section id="services" class="bg-white py-20">
+    <div class="max-w-7xl mx-auto px-4">
+
+      <!-- Eyebrow + Heading -->
+      <div class="mb-12">
+        <p class="eyebrow">
+          <span class="eyebrow-line"></span>
+          WHAT WE DO
+        </p>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-navy flex items-center flex-wrap gap-3">
+          Our Services
+          <span class="heading-gradient-line"></span>
+        </h2>
+      </div>
+
+      <!-- Cards Grid -->
+      <!-- Top row: 3 cards, bottom row: 2 centered -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+
+        <!-- Window Cleaning -->
+        <div class="service-card">
+          <img class="service-card-img" src="assets/images/service-windows.png" alt="Window Cleaning" />
+          <div class="service-card-gradient"></div>
+          <div class="service-card-teal-overlay"></div>
+          <div class="service-card-bar"></div>
+          <div class="service-card-content">
+            <span class="service-card-title">Window Cleaning</span>
+            <p class="service-card-desc">Streak-free results inside and out. We handle residential and commercial windows of all sizes — safely and efficiently.</p>
+          </div>
+        </div>
+
+        <!-- Gutter Cleaning -->
+        <div class="service-card">
+          <img class="service-card-img" src="assets/images/service-gutters.png" alt="Gutter Cleaning" />
+          <div class="service-card-gradient"></div>
+          <div class="service-card-teal-overlay"></div>
+          <div class="service-card-bar"></div>
+          <div class="service-card-content">
+            <span class="service-card-title">Gutter Cleaning</span>
+            <p class="service-card-desc">Clogged gutters lead to costly damage. We clear debris, flush downspouts, and keep your drainage flowing freely.</p>
+          </div>
+        </div>
+
+        <!-- Pressure Washing -->
+        <div class="service-card">
+          <img class="service-card-img" src="assets/images/service-pressure.png" alt="Pressure Washing" />
+          <div class="service-card-gradient"></div>
+          <div class="service-card-teal-overlay"></div>
+          <div class="service-card-bar"></div>
+          <div class="service-card-content">
+            <span class="service-card-title">Pressure Washing</span>
+            <p class="service-card-desc">Blast away years of grime, mold, and mildew from driveways, patios, siding, and more. Your property will look brand new.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom row: 2 centered -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:w-2/3 lg:mx-auto">
+
+        <!-- Paver Sealing -->
+        <div class="service-card">
+          <img class="service-card-img" src="assets/images/service-pavers.png" alt="Paver Sealing" />
+          <div class="service-card-gradient"></div>
+          <div class="service-card-teal-overlay"></div>
+          <div class="service-card-bar"></div>
+          <div class="service-card-content">
+            <span class="service-card-title">Paver Sealing</span>
+            <p class="service-card-desc">Protect your pavers from stains, weeds, and wear. We seal and restore driveways and walkways to a showroom finish.</p>
+          </div>
+        </div>
+
+        <!-- Solar Panel Cleaning -->
+        <div class="service-card">
+          <img class="service-card-img" src="assets/images/service-solar.png" alt="Solar Panel Cleaning" />
+          <div class="service-card-gradient"></div>
+          <div class="service-card-teal-overlay"></div>
+          <div class="service-card-bar"></div>
+          <div class="service-card-content">
+            <span class="service-card-title">Solar Panel Cleaning</span>
+            <p class="service-card-desc">Dirty panels lose efficiency. Regular cleaning maximizes your energy output and protects your investment.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CTA -->
+      <div class="text-center mt-12">
+        <a href="#contact" class="inline-block bg-[#1FC6C7] text-[#1A1E32] font-bold px-10 py-4 rounded-lg text-base hover:bg-[#17b0b1] transition-colors duration-150 shadow-md">Request a Free Estimate</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================
+       ABOUT
+       ============================================ -->
+  <section id="about" class="bg-[#F5F5F5] py-20">
+    <div class="max-w-7xl mx-auto px-4">
+
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+        <!-- Photo -->
+        <div class="relative">
+          <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-[#1FC6C7] rounded-full"></div>
+          <img
+            src="assets/images/IMG_0014.jpeg"
+            alt="Andrew Mroz, Owner & Operator"
+            class="w-full rounded-xl shadow-xl pl-5 object-cover max-h-[520px]"
+          />
+        </div>
+
+        <!-- Text -->
+        <div>
+          <p class="eyebrow">
+            <span class="eyebrow-line"></span>
+            ABOUT US
+          </p>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-navy mb-6 flex items-center gap-3">
+            Our Mission
+            <span class="heading-gradient-line"></span>
+          </h2>
+          <p class="text-gray-600 text-base leading-relaxed mb-6">
+            At Clear Point Window Cleaning, we are a dedicated small business committed to delivering top-tier window, gutter, and solar panel cleaning services. With years of experience serving satisfied clients, we bring that same level of excellence to the communities of Pinellas and Pasco County, Florida.
+          </p>
+          <p class="text-gray-500 text-sm font-semibold italic mb-8">— Andrew Mroz, Owner &amp; Operator</p>
+
+          <!-- Trust Badges -->
+          <div class="flex flex-wrap gap-3">
+            <span class="trust-pill">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-[#1FC6C7]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+              Locally Owned
+            </span>
+            <span class="trust-pill">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-[#1FC6C7]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+              </svg>
+              Small Business
+            </span>
+            <span class="trust-pill">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-[#1FC6C7]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+              </svg>
+              Satisfaction Guaranteed
+            </span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       REVIEWS
+       ============================================ -->
+  <section id="reviews" class="bg-white py-20">
+    <div class="max-w-7xl mx-auto px-4">
+
+      <div class="mb-12 text-center">
+        <p class="eyebrow justify-center">
+          <span class="eyebrow-line"></span>
+          WHAT CLIENTS SAY
+          <span class="eyebrow-line"></span>
+        </p>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-navy">5-Star Reviews</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
+
+        <!-- Review 1 -->
+        <div class="bg-[#F5F5F5] rounded-2xl p-8 border border-gray-200 flex flex-col">
+          <span class="text-6xl text-[#1FC6C7] font-extrabold leading-none mb-4 select-none">&ldquo;</span>
+          <p class="text-gray-600 text-sm leading-relaxed flex-1 mb-6">Came to my house and was presentable and kind. Did a wonderful job cleaning the windows inside and out! I would definitely recommend this service.</p>
+          <div>
+            <p class="font-bold text-navy text-sm">Danilo Atenza</p>
+            <span class="text-[#FF662A] text-lg tracking-wide">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="bg-[#F5F5F5] rounded-2xl p-8 border border-gray-200 flex flex-col">
+          <span class="text-6xl text-[#1FC6C7] font-extrabold leading-none mb-4 select-none">&ldquo;</span>
+          <p class="text-gray-600 text-sm leading-relaxed flex-1 mb-6">Andrew was a cold call at my front door today. He was very professional and personable. He did a wonderful job on all of our windows and screens. I highly recommend!</p>
+          <div>
+            <p class="font-bold text-navy text-sm">Tracey W</p>
+            <span class="text-[#FF662A] text-lg tracking-wide">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="bg-[#F5F5F5] rounded-2xl p-8 border border-gray-200 flex flex-col">
+          <span class="text-6xl text-[#1FC6C7] font-extrabold leading-none mb-4 select-none">&ldquo;</span>
+          <p class="text-gray-600 text-sm leading-relaxed flex-1 mb-6">We had such a great experience with Clear Point. Andrew was prompt, thorough, and left our windows spotless. Our home looks completely different — so much brighter!</p>
+          <div>
+            <p class="font-bold text-navy text-sm">CR Yenob</p>
+            <span class="text-[#FF662A] text-lg tracking-wide">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Google CTA -->
+      <div class="text-center">
+        <a href="#" class="inline-flex items-center gap-2 border-2 border-[#1FC6C7] text-[#1FC6C7] font-bold px-7 py-3 rounded-lg text-sm hover:bg-[#1FC6C7] hover:text-[#1A1E32] transition-colors duration-150">
+          Read More Reviews on Google
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================
+       SERVICE AREAS
+       ============================================ -->
+  <section id="areas" class="bg-[#1A1E32] py-20">
+    <div class="max-w-3xl mx-auto px-4">
+
+      <div class="mb-10 text-center">
+        <p class="eyebrow justify-center text-white/60">
+          <span class="eyebrow-line"></span>
+          WHERE WE WORK
+          <span class="eyebrow-line"></span>
+        </p>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Areas We Serve</h2>
+      </div>
+
+      <!-- Accordion: Pasco County -->
+      <div class="mb-3 rounded-xl overflow-hidden border border-white/10">
+        <button class="accordion-trigger w-full flex items-center justify-between bg-[#1FC6C7] text-[#1A1E32] font-bold px-6 py-4 text-left text-base hover:bg-[#17b0b1] transition-colors duration-150">
+          <span class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+            Pasco County
+          </span>
+          <svg class="accordion-chevron w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </button>
+        <div class="accordion-content bg-white/5 px-6">
+          <div class="py-5 flex flex-wrap gap-2">
+            <span class="border border-[#1FC6C7] text-[#1FC6C7] rounded-full px-3 py-1 text-xs font-semibold">New Port Richey</span>
+            <span class="border border-[#1FC6C7] text-[#1FC6C7] rounded-full px-3 py-1 text-xs font-semibold">Port Richey</span>
+            <span class="border border-[#1FC6C7] text-[#1FC6C7] rounded-full px-3 py-1 text-xs font-semibold">Holiday</span>
+            <span class="border border-[#1FC6C7] text-[#1FC6C7] rounded-full px-3 py-1 text-xs font-semibold">Seven Springs</span>
+            <span class="border border-[#1FC6C7] text-[#1FC6C7] rounded-full px-3 py-1 text-xs font-semibold">Land O Lakes</span>
+            <span class="border border-[#1FC6C7] text-[#1FC6C7] rounded-full px-3 py-1 text-xs font-semibold">Trinity</span>
+            <span class="border border-[#1FC6C7] text-[#1FC6C7] rounded-full px-3 py-1 text-xs font-semibold">Odessa</span>
+            <span class="border border-[#1FC6C7] text-[#1FC6C7] rounded-full px-3 py-1 text-xs font-semibold">Bayonet Point</span>
+            <span class="border border-[#1FC6C7] text-[#1FC6C7] rounded-full px-3 py-1 text-xs font-semibold">River Edge</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Accordion: Pinellas County -->
+      <div class="mb-8 rounded-xl overflow-hidden border border-white/10">
+        <button class="accordion-trigger w-full flex items-center justify-between bg-[#1FC6C7] text-[#1A1E32] font-bold px-6 py-4 text-left text-base hover:bg-[#17b0b1] transition-colors duration-150">
+          <span class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+            Pinellas County
+          </span>
+          <svg class="accordion-chevron w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </button>
+        <div class="accordion-content bg-white/5 px-6">
+          <div class="py-5 flex flex-wrap gap-2">
+            <span class="border border-[#1FC6C7] text-[#1FC6C7] rounded-full px-3 py-1 text-xs font-semibold">Tarpon Springs</span>
+            <span class="border border-[#1FC6C7] text-[#1FC6C7] rounded-full px-3 py-1 text-xs font-semibold">Palm Harbor</span>
+            <span class="border border-[#1FC6C7] text-[#1FC6C7] rounded-full px-3 py-1 text-xs font-semibold">Dunedin</span>
+            <span class="border border-[#1FC6C7] text-[#1FC6C7] rounded-full px-3 py-1 text-xs font-semibold">Clearwater</span>
+            <span class="border border-[#1FC6C7] text-[#1FC6C7] rounded-full px-3 py-1 text-xs font-semibold">Largo</span>
+            <span class="border border-[#1FC6C7] text-[#1FC6C7] rounded-full px-3 py-1 text-xs font-semibold">East Lake</span>
+            <span class="border border-[#1FC6C7] text-[#1FC6C7] rounded-full px-3 py-1 text-xs font-semibold">Boot Ranch</span>
+            <span class="border border-[#1FC6C7] text-[#1FC6C7] rounded-full px-3 py-1 text-xs font-semibold">St. Petersburg</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tampa badge + note -->
+      <div class="flex flex-col items-center gap-4 text-center">
+        <span class="bg-[#FF662A] text-white font-bold px-5 py-2 rounded-full text-sm">Tampa &amp; Surrounding Areas</span>
+        <p class="text-white/60 text-sm">Don't see your city? Give us a call — we may still be able to help.</p>
+        <a href="tel:9804353637" class="mt-2 bg-[#FF662A] text-white font-bold px-8 py-4 rounded-lg text-base hover:bg-[#e5551f] transition-colors duration-150 shadow-md">Call (980) 435-3637</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================
+       GALLERY TEASER
+       ============================================ -->
+  <section id="gallery-teaser" class="bg-[#F5F5F5] py-20">
+    <div class="max-w-7xl mx-auto px-4">
+
+      <div class="mb-10 text-center">
+        <p class="eyebrow justify-center">
+          <span class="eyebrow-line"></span>
+          OUR WORK
+          <span class="eyebrow-line"></span>
+        </p>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-navy">See the Results</h2>
+      </div>
+
+      <!-- 6-photo grid -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 mb-10">
+        <div class="gallery-item aspect-[4/3]">
+          <img src="assets/images/IMG_0034-scaled.jpeg" alt="Window cleaning result" />
+          <div class="gallery-item-overlay">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/>
+            </svg>
+          </div>
+        </div>
+        <div class="gallery-item aspect-[4/3]">
+          <img src="assets/images/IMG_0036-scaled.jpeg" alt="Gutter cleaning result" />
+          <div class="gallery-item-overlay">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/>
+            </svg>
+          </div>
+        </div>
+        <div class="gallery-item aspect-[4/3]">
+          <img src="assets/images/IMG_0037-scaled.jpeg" alt="Pressure washing result" />
+          <div class="gallery-item-overlay">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/>
+            </svg>
+          </div>
+        </div>
+        <div class="gallery-item aspect-[4/3]">
+          <img src="assets/images/IMG_0041-scaled.jpeg" alt="Solar panel cleaning" />
+          <div class="gallery-item-overlay">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/>
+            </svg>
+          </div>
+        </div>
+        <div class="gallery-item aspect-[4/3]">
+          <img src="assets/images/IMG_0042-scaled.jpeg" alt="Paver sealing result" />
+          <div class="gallery-item-overlay">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/>
+            </svg>
+          </div>
+        </div>
+        <div class="gallery-item aspect-[4/3]">
+          <img src="assets/images/IMG_0020-scaled.jpeg" alt="Window cleaning before/after" />
+          <div class="gallery-item-overlay">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <a href="our-work.html" class="inline-flex items-center gap-2 bg-[#1FC6C7] text-[#1A1E32] font-bold px-8 py-4 rounded-lg text-base hover:bg-[#17b0b1] transition-colors duration-150 shadow-md">
+          View Full Gallery
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================
+       CONTACT
+       ============================================ -->
+  <section id="contact" class="bg-[#1A1E32] py-20">
+    <div class="max-w-7xl mx-auto px-4">
+
+      <div class="mb-12 text-center">
+        <p class="eyebrow justify-center text-white/60">
+          <span class="eyebrow-line"></span>
+          GET IN TOUCH
+          <span class="eyebrow-line"></span>
+        </p>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Request a Free Estimate</h2>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-12 items-start">
+
+        <!-- Form -->
+        <div>
+          <form id="contact-form" action="https://formspree.io/f/REPLACE_WITH_ID" method="POST" class="flex flex-col gap-4">
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-white/70 text-xs font-semibold mb-1.5 uppercase tracking-wide">Your Name</label>
+                <input name="name" type="text" required placeholder="John Smith" class="form-input" />
+              </div>
+              <div>
+                <label class="block text-white/70 text-xs font-semibold mb-1.5 uppercase tracking-wide">Phone</label>
+                <input name="phone" type="tel" required placeholder="(727) 555-0123" class="form-input" />
+              </div>
+            </div>
+            <div>
+              <label class="block text-white/70 text-xs font-semibold mb-1.5 uppercase tracking-wide">Email</label>
+              <input name="email" type="email" required placeholder="john@example.com" class="form-input" />
+            </div>
+            <div>
+              <label class="block text-white/70 text-xs font-semibold mb-1.5 uppercase tracking-wide">Property Address</label>
+              <input name="address" type="text" placeholder="123 Main St, Clearwater, FL" class="form-input" />
+            </div>
+            <div>
+              <label class="block text-white/70 text-xs font-semibold mb-1.5 uppercase tracking-wide">Service Needed</label>
+              <select name="service" class="form-input">
+                <option value="">Select a service…</option>
+                <option value="Window Cleaning">Window Cleaning</option>
+                <option value="Gutter Cleaning">Gutter Cleaning</option>
+                <option value="Pressure Washing">Pressure Washing</option>
+                <option value="Paver Sealing">Paver Sealing</option>
+                <option value="Solar Panel Cleaning">Solar Panel Cleaning</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-white/70 text-xs font-semibold mb-1.5 uppercase tracking-wide">Message</label>
+              <textarea name="message" rows="4" placeholder="Tell us about your property and what you need…" class="form-input resize-none"></textarea>
+            </div>
+
+            <button type="submit" class="w-full bg-[#FF662A] text-white font-bold py-4 rounded-lg text-base hover:bg-[#e5551f] transition-colors duration-150 mt-2">
+              Send My Request
+            </button>
+          </form>
+
+          <!-- Success / Error messages -->
+          <div id="form-success" class="hidden mt-4 bg-green-500/20 border border-green-400 text-green-300 font-semibold rounded-lg px-5 py-4 text-sm">
+            Message sent! We'll be in touch shortly.
+          </div>
+          <div id="form-error" class="hidden mt-4 bg-red-500/20 border border-red-400 text-red-300 font-semibold rounded-lg px-5 py-4 text-sm">
+            Something went wrong. Please call us directly at (980) 435-3637.
+          </div>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="text-white space-y-8">
+          <div>
+            <h3 class="text-xl font-bold mb-4 text-[#1FC6C7]">Contact Info</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mt-0.5 text-[#FF662A] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                <div>
+                  <p class="text-white/60 text-xs font-semibold uppercase tracking-wide mb-0.5">Phone</p>
+                  <a href="tel:9804353637" class="text-white font-bold hover:text-[#1FC6C7] transition-colors">(980) 435-3637</a>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mt-0.5 text-[#FF662A] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                <div>
+                  <p class="text-white/60 text-xs font-semibold uppercase tracking-wide mb-0.5">Email</p>
+                  <span class="text-white font-bold">info@clearpointwindows.com</span>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mt-0.5 text-[#FF662A] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
+                <div>
+                  <p class="text-white/60 text-xs font-semibold uppercase tracking-wide mb-0.5">Service Area</p>
+                  <span class="text-white font-bold">Pinellas &amp; Pasco County, FL</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="border-t border-white/10 pt-6">
+            <h4 class="text-[#1FC6C7] font-bold mb-3">Business Hours</h4>
+            <ul class="space-y-2 text-sm">
+              <li class="flex justify-between text-white/75">
+                <span>Monday – Friday</span>
+                <span class="font-semibold text-white">8:00 AM – 7:00 PM</span>
+              </li>
+              <li class="flex justify-between text-white/75">
+                <span>Saturday</span>
+                <span class="font-semibold text-white">9:00 AM – 6:00 PM</span>
+              </li>
+              <li class="flex justify-between text-white/75">
+                <span>Sunday</span>
+                <span class="font-semibold text-[#FF662A]">Closed</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-[#1FC6C7]/10 border border-[#1FC6C7]/30 rounded-xl p-5">
+            <p class="text-[#1FC6C7] font-bold text-sm mb-1">Same-Day Quotes Available</p>
+            <p class="text-white/70 text-sm">Give us a call and we'll often have a quote ready before you hang up.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="bg-[#1FC6C7]">
+    <div class="max-w-7xl mx-auto px-4 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+        <!-- Col 1: Logo + Tagline + Social -->
+        <div>
+          <img src="assets/logo-white.png" alt="Clear Point Window Cleaning" class="h-12 w-auto mb-3" />
+          <p class="text-[#1A1E32] text-sm font-medium max-w-xs">
+            Pinellas &amp; Pasco County's trusted window and exterior cleaning experts.
+          </p>
+          <!-- Social placeholders -->
+          <div class="flex gap-3 mt-5">
+            <a href="#" aria-label="Facebook" class="bg-[#1A1E32] text-white w-9 h-9 rounded-full flex items-center justify-center hover:bg-[#FF662A] transition-colors duration-150">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="Instagram" class="bg-[#1A1E32] text-white w-9 h-9 rounded-full flex items-center justify-center hover:bg-[#FF662A] transition-colors duration-150">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links + Services -->
+        <div class="grid grid-cols-2 gap-6">
+          <div>
+            <h4 class="text-[#1A1E32] font-extrabold text-sm uppercase tracking-wide mb-3">Quick Links</h4>
+            <ul class="space-y-2 text-sm font-medium text-[#1A1E32]/80">
+              <li><a href="#" class="hover:text-[#1A1E32] hover:underline">Home</a></li>
+              <li><a href="#services" class="hover:text-[#1A1E32] hover:underline">Services</a></li>
+              <li><a href="#about" class="hover:text-[#1A1E32] hover:underline">About</a></li>
+              <li><a href="our-work.html" class="hover:text-[#1A1E32] hover:underline">Our Work</a></li>
+              <li><a href="#contact" class="hover:text-[#1A1E32] hover:underline">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-[#1A1E32] font-extrabold text-sm uppercase tracking-wide mb-3">Services</h4>
+            <ul class="space-y-2 text-sm font-medium text-[#1A1E32]/80">
+              <li>Window Cleaning</li>
+              <li>Gutter Cleaning</li>
+              <li>Pressure Washing</li>
+              <li>Paver Sealing</li>
+              <li>Solar Panel Cleaning</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Col 3: Contact Info -->
+        <div>
+          <h4 class="text-[#1A1E32] font-extrabold text-sm uppercase tracking-wide mb-3">Contact</h4>
+          <ul class="space-y-3 text-sm font-medium text-[#1A1E32]/80">
+            <li>
+              <a href="tel:9804353637" class="flex items-center gap-2 hover:text-[#1A1E32] hover:underline font-bold">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                (980) 435-3637
+              </a>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              info@clearpointwindows.com
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              Mon–Fri 8am–7pm<br/>Sat 9am–6pm<br/>Sun Closed
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="bg-[#1A1E32] py-4">
+      <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-white/60">
+        <span>&copy; 2025 Clear Point Window Cleaning. All rights reserved.</span>
+        <span>Built by <a href="https://onpointfl.com" class="text-[#1FC6C7] hover:underline font-semibold">On Point</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- App JS -->
+  <script src="app.js" defer></script>
+
+</body>
+</html>

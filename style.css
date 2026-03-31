@@ -1,0 +1,500 @@
+/* ============================================
+   Clear Point Window Cleaning — Custom CSS
+   ============================================ */
+
+/* ---------- Base ---------- */
+html {
+  scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #1A1E32;
+  margin: 0;
+}
+
+/* ---------- Sticky Nav ---------- */
+#navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  transition: box-shadow 0.25s ease;
+}
+
+#navbar.scrolled {
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+}
+
+/* ---------- Mobile Menu ---------- */
+#mobile-menu {
+  position: fixed;
+  inset: 0;
+  background: #1A1E32;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  transform: translateX(100%);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+}
+
+#mobile-menu.open {
+  transform: translateX(0);
+  pointer-events: all;
+}
+
+#mobile-menu a {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+#mobile-menu a:hover {
+  color: #1FC6C7;
+}
+
+/* ---------- Hero ---------- */
+.hero-video-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  overflow: hidden;
+}
+
+.hero-video-wrapper video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(26, 30, 50, 0.65);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+/* ---------- Hero Bounce Arrow ---------- */
+.hero-arrow {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  animation: bounce 1.8s ease-in-out infinite;
+  cursor: pointer;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%       { transform: translateX(-50%) translateY(10px); }
+}
+
+/* ---------- Stats Counter ---------- */
+.stats-counter {
+  display: inline-block;
+  transition: opacity 0.3s;
+}
+
+/* ---------- Service Cards ---------- */
+.service-card {
+  height: 288px;
+  border: 4px solid #1A1E32;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.service-card-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 0;
+}
+
+.service-card-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 50%, transparent 100%);
+  z-index: 1;
+  transition: opacity 0.3s ease;
+}
+
+.service-card-teal-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(31, 198, 199, 0.75);
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+/* Orange accent bar — top-left corner, grows on hover */
+.service-card-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 0;
+  background: #FF662A;
+  z-index: 4;
+  transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-card-content {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.25rem;
+}
+
+.service-card-title {
+  color: #fff;
+  font-size: 1.125rem;
+  font-weight: 700;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.6);
+  transition: color 0.2s, transform 0.3s;
+}
+
+.service-card-desc {
+  color: #1A1E32;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.35s ease, opacity 0.3s ease;
+}
+
+/* Hover state */
+.service-card:hover .service-card-img {
+  transform: scale(1.1);
+}
+
+.service-card:hover .service-card-teal-overlay {
+  opacity: 1;
+}
+
+.service-card:hover .service-card-gradient {
+  opacity: 0;
+}
+
+.service-card:hover .service-card-bar {
+  width: 100%;
+}
+
+.service-card:hover .service-card-title {
+  color: #1A1E32;
+  text-shadow: none;
+  transform: translateY(-4px);
+}
+
+.service-card:hover .service-card-desc {
+  max-height: 120px;
+  opacity: 1;
+}
+
+/* ---------- Accordion ---------- */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.accordion-content.open {
+  max-height: 600px;
+}
+
+.accordion-chevron {
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.accordion-chevron.rotated {
+  transform: rotate(180deg);
+}
+
+/* ---------- Gallery Grid ---------- */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  display: block;
+}
+
+.gallery-item-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(31, 198, 199, 0.6);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-item-overlay svg {
+  color: #fff;
+  width: 40px;
+  height: 40px;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.06);
+}
+
+.gallery-item:hover .gallery-item-overlay {
+  opacity: 1;
+}
+
+/* ---------- Lightbox ---------- */
+#lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.92);
+  z-index: 200;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.2s ease;
+}
+
+#lightbox.active {
+  display: flex;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+#lightbox img {
+  max-width: 92vw;
+  max-height: 88vh;
+  object-fit: contain;
+  border-radius: 6px;
+  box-shadow: 0 8px 48px rgba(0,0,0,0.6);
+}
+
+.lightbox-close {
+  position: fixed;
+  top: 1.25rem;
+  right: 1.5rem;
+  background: rgba(255,255,255,0.1);
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  z-index: 201;
+}
+
+.lightbox-close:hover {
+  background: rgba(255, 102, 42, 0.7);
+}
+
+.lightbox-prev,
+.lightbox-next {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.12);
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  z-index: 201;
+}
+
+.lightbox-prev { left: 1rem; }
+.lightbox-next { right: 1rem; }
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  background: rgba(31, 198, 199, 0.7);
+}
+
+/* ---------- Video Cards ---------- */
+.video-card {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #1A1E32;
+  cursor: pointer;
+  border: 2px solid #1A1E32;
+}
+
+.video-card video {
+  width: 100%;
+  display: block;
+  aspect-ratio: 9/16;
+  object-fit: cover;
+  transition: opacity 0.2s;
+}
+
+.video-play-icon {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+
+.video-play-icon svg {
+  width: 56px;
+  height: 56px;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.5));
+}
+
+.video-card:hover .video-play-icon {
+  opacity: 0;
+}
+
+/* ---------- Form ---------- */
+.form-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 2px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.form-input:focus {
+  border-color: #1FC6C7;
+}
+
+.form-input::placeholder {
+  color: rgba(255,255,255,0.45);
+}
+
+.form-input option {
+  background: #1A1E32;
+  color: #fff;
+}
+
+/* ---------- Trust Badge Pills ---------- */
+.trust-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(31,198,199,0.12);
+  border: 1.5px solid #1FC6C7;
+  color: #1A1E32;
+  border-radius: 999px;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* ---------- Section Eyebrow ---------- */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #1FC6C7;
+  margin-bottom: 0.75rem;
+}
+
+.eyebrow-line {
+  display: inline-block;
+  width: 2.5rem;
+  height: 2px;
+  background: #FF662A;
+}
+
+/* ---------- Teal Gradient Heading Line ---------- */
+.heading-gradient-line {
+  display: inline-block;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(to right, #1FC6C7, transparent);
+  margin-left: 0.75rem;
+  vertical-align: middle;
+  border-radius: 2px;
+}
+
+/* ---------- Scroll fade-in (for future enhancement) ---------- */
+@media (prefers-reduced-motion: no-preference) {
+  .fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  .fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- Responsive video grid ---------- */
+@media (max-width: 640px) {
+  .video-card video {
+    aspect-ratio: 9/16;
+  }
+}
