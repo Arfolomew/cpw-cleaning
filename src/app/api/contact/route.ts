@@ -3,9 +3,8 @@ export const dynamic = "force-static";
 import { Resend } from "resend";
 import { NextRequest, NextResponse } from "next/server";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export async function POST(req: NextRequest) {
+  const resend = new Resend(process.env.RESEND_API_KEY);
   const body = await req.json();
   const { name, phone, email, address, service, message } = body;
 
