@@ -97,22 +97,60 @@ body {
   height: 100%;
   text-align: center;
   padding: 2rem 1rem;
+  margin-top: -80px;
 }
 
-/* ---------- Hero Bounce Arrow ---------- */
-.hero-arrow {
+/* ---------- Hero Scroll Indicator ---------- */
+.hero-scroll {
   position: absolute;
   bottom: 2rem;
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
-  animation: bounce 1.8s ease-in-out infinite;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
   cursor: pointer;
+  text-decoration: none;
 }
 
-@keyframes bounce {
-  0%, 100% { transform: translateX(-50%) translateY(0); }
-  50%       { transform: translateX(-50%) translateY(10px); }
+.scroll-mouse {
+  width: 26px;
+  height: 40px;
+  border: 2px solid rgba(255,255,255,0.7);
+  border-radius: 13px;
+  position: relative;
+}
+
+.scroll-wheel {
+  width: 3px;
+  height: 8px;
+  background: #1FC6C7;
+  border-radius: 2px;
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: scroll-line 1.8s ease-in-out infinite;
+}
+
+.scroll-line {
+  width: 1px;
+  height: 18px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.6), transparent);
+  animation: fade-line 1.8s ease-in-out infinite;
+}
+
+@keyframes scroll-line {
+  0%   { top: 6px; opacity: 1; }
+  80%  { top: 22px; opacity: 0; }
+  100% { top: 6px; opacity: 0; }
+}
+
+@keyframes fade-line {
+  0%, 100% { opacity: 0.5; }
+  50%       { opacity: 1; }
 }
 
 /* ---------- Stats Counter ---------- */
